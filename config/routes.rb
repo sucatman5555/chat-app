@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  get 'messages/index'
+  devise_for :users
+  # get 'messages/index'
+
   # SSedit
   root to: "messages#index"
+  # SSedit2
+  resources :users, only: [:edit, :update]
 end
