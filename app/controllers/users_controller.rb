@@ -9,6 +9,9 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+    
+    
+    
   end
 
   private
