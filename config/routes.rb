@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   # SSedit2
   resources :users, only: [:edit, :update]
   # SSedit3
-  resources :rooms, only: [:new, :create]
+  # resources :rooms, only: [:new, :create]
+  resources :rooms, only: [:new, :create] do
+    resources :messages, only: [:index, :create]
+  end
 
 end
